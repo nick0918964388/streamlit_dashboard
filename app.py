@@ -9,13 +9,34 @@ st.set_page_config(page_title="ESG 平台", layout="wide")
 with st.sidebar:
     st.title("tsmc ESG platform")
     st.sidebar.markdown("---")
-    st.sidebar.button("温室气体")
-    st.sidebar.button("能源管理")
-    st.sidebar.button("建筑物")
-    st.sidebar.button("水管理")
-    st.sidebar.button("资源管理")
-    st.sidebar.button("空气污染防制")
-    st.sidebar.button("管理功能表")
+    
+    # 环境
+    with st.expander("环境", expanded=True):
+        st.button("温室气体")
+        st.button("能源管理")
+        st.button("水资源管理")
+        st.button("废弃物管理")
+        st.button("空气污染防制")
+    
+    # 社会
+    with st.expander("社会", expanded=True):
+        st.button("人力资源")
+        st.button("职业健康与安全")
+        st.button("供应链管理")
+        st.button("社区参与")
+    
+    # 治理
+    with st.expander("治理", expanded=True):
+        st.button("公司治理")
+        st.button("风险管理")
+        st.button("商业道德")
+        st.button("信息安全")
+    
+    # 管理功能
+    with st.expander("管理功能", expanded=True):
+        st.button("数据分析")
+        st.button("报告生成")
+        st.button("设置")
 
 # 主页面
 st.title("Dashboard")
